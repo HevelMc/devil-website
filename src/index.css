@@ -13,10 +13,6 @@
   border-radius: 5px;
 }
 
-.home-name {
-  font-size: 60px;
-}
-
 .video-container {
   height: 600px;
   width: 100%;
@@ -39,8 +35,6 @@
   text-align: center;
   color: white;
   margin: auto;
-  padding-left: 10rem;
-  padding-right: 10rem;
 }
 
 .darkener {
@@ -49,4 +43,31 @@
   position: inherit;
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zoom {
+  overflow: hidden;
+}
+
+.zoom img {
+  transition: 0.5s all ease-in-out;
+  width: 100%;
+}
+
+.zoom:hover img {
+  transform: scale(1.2);
+}
+
+div.rounded {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+img.rounded {
+  width: 100%;
+  height: auto;
 }
