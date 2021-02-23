@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
                 BIENVENUE SUR LE SITE WEB DE LA STRUCTURE DEVIL MULTIGAMING
               </h2>
               <h3 className="cursive text-2xl pt-10">
-                Suivre sur twitter @esportdevils et @CupChampionShip
+                Suivre sur twitter @EsportDevils et @CupChampionShip
               </h3>
             </div>
           </div>
@@ -31,29 +31,31 @@ export default function Home() {
         <h1 className="font-black cursive text-dark text-3xl text-center">
           PRÉSENTATION DEVIL MULTIGAMING ET DEVIL LEAGUE
         </h1>
-        <div className="flex flex-wrap space-x-4 pt-12 lg:px-20">
+        <div className="flex flex-wrap space-x-4 pt-12 lg:px-20 xl:px-40 2xl:px-60">
           <div className="flex-auto md:flex-1 text-center px-4 pb-12">
-          <ScrollAnimation animateIn="animate__fadeInLeft">
-            <div className="zoom">
-              <img
-                src={process.env.PUBLIC_URL + "/medias/devil multigaming.jpg"}
+            <ScrollAnimation animateIn="animate__fadeInLeft">
+              <div className="zoom">
+                <img
+                  src={process.env.PUBLIC_URL + "/medias/devil multigaming.jpg"}
                 />
-            </div>
-            <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
-              Qu'est-ce que Devil Multigaming ? Devil MultiGaming est une
-              structure e-sport qui concerne les joueurs PS4, Xbox One et PC
-            </p>
-          </ScrollAnimation>
+              </div>
+              <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
+                Qu'est-ce que Devil Multigaming ? Devil MultiGaming est une
+                structure e-sport qui concerne les joueurs PS4, Xbox One et PC
+              </p>
+            </ScrollAnimation>
           </div>
           <div className="flex-auto md:flex-1 text-center px-4">
             <ScrollAnimation animateIn="animate__fadeInRight">
-            <div className="zoom">
-              <img src={process.env.PUBLIC_URL + "/medias/devil league.jpg"} />
-            </div>
-            <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
-              La structure Devil League organise aussi des tournois Royal Cup
-              sur différentes plateformes et jeux et créé des LANs e-sport
-            </p>
+              <div className="zoom">
+                <img
+                  src={process.env.PUBLIC_URL + "/medias/devil league.jpg"}
+                />
+              </div>
+              <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
+                La structure Devil League organise aussi des tournois Royal Cup
+                sur différentes plateformes et jeux et créé des LANs e-sport
+              </p>
             </ScrollAnimation>
           </div>
         </div>
@@ -78,7 +80,7 @@ export default function Home() {
           <Project
             img="3.jpg"
             title="SUPERVISION DE CONSTRUCTION"
-            desc="Compte officiel de Cod.communautefr et valorant_cup création et organisation d'événements plateformes et multigaming. Partenariat avec la devil"
+            desc="Partenaires officiels : @CODcommunauteFR et @Valorant_CUP - Création et organisation d'événements plateformes et multigaming."
           />
           <Project
             img="4.png"
@@ -88,7 +90,7 @@ export default function Home() {
           <Project
             img="5.png"
             title="PONCTUALITÉ"
-            desc="Pour tout demande, contacter @esportdevil"
+            desc="Pour toute demande, contacter @EsportDevils"
           />
           <Project
             img="6.png"
@@ -104,16 +106,22 @@ export default function Home() {
 function Project({ img, title, desc }) {
   return (
     <ScrollAnimation animateIn="animate__fadeIn">
-      <div className="text-center cursive">
-        <div className="rounded">
+      <figure className="bg-gray-100 rounded-xl p-4 shadow-lg">
+        <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-2 border-gray-400 border-opacity-50">
           <img
-            className="rounded m-auto"
+            className="h-auto"
             src={process.env.PUBLIC_URL + "/medias/vos-projets/" + img}
-          ></img>
+          />
         </div>
-        <h4 className="text-2xl text-black">{title}</h4>
-        <p className="text-lg">{desc}</p>
-      </div>
+        <div className="pt-6 md:p-6 text-center md:text-left space-y-4">
+          <blockquote>
+            <p className="text-lg text-center font-semibold">{title}</p>
+          </blockquote>
+          <figcaption className="font-medium text-center">
+            <div className="text-gray-500">{desc}</div>
+          </figcaption>
+        </div>
+      </figure>
     </ScrollAnimation>
   );
 }

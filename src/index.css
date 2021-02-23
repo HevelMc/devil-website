@@ -42,7 +42,7 @@
   width: 100%;
   position: inherit;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .zoom {
@@ -56,18 +56,4 @@
 
 .zoom:hover img {
   transform: scale(1.2);
-}
-
-div.rounded {
-  display: inline-block;
-  position: relative;
-  width: 120px;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-img.rounded {
-  width: 100%;
-  height: auto;
 }
