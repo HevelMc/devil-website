@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 export default function Home() {
   return (
@@ -31,17 +33,20 @@ export default function Home() {
         </h1>
         <div className="flex flex-wrap space-x-4 pt-12 lg:px-20">
           <div className="flex-auto md:flex-1 text-center px-4 pb-12">
+          <ScrollAnimation animateIn="animate__fadeInLeft">
             <div className="zoom">
               <img
                 src={process.env.PUBLIC_URL + "/medias/devil multigaming.jpg"}
-              />
+                />
             </div>
             <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
               Qu'est-ce que Devil Multigaming ? Devil MultiGaming est une
               structure e-sport qui concerne les joueurs PS4, Xbox One et PC
             </p>
+          </ScrollAnimation>
           </div>
           <div className="flex-auto md:flex-1 text-center px-4">
+            <ScrollAnimation animateIn="animate__fadeInRight">
             <div className="zoom">
               <img src={process.env.PUBLIC_URL + "/medias/devil league.jpg"} />
             </div>
@@ -49,6 +54,7 @@ export default function Home() {
               La structure Devil League organise aussi des tournois Royal Cup
               sur différentes plateformes et jeux et créé des LANs e-sport
             </p>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -97,15 +103,17 @@ export default function Home() {
 
 function Project({ img, title, desc }) {
   return (
-    <div className="text-center cursive">
-      <div className="rounded">
-        <img
-          className="rounded m-auto"
-          src={process.env.PUBLIC_URL + "/medias/vos-projets/" + img}
-        ></img>
+    <ScrollAnimation animateIn="animate__fadeIn">
+      <div className="text-center cursive">
+        <div className="rounded">
+          <img
+            className="rounded m-auto"
+            src={process.env.PUBLIC_URL + "/medias/vos-projets/" + img}
+          ></img>
+        </div>
+        <h4 className="text-2xl text-black">{title}</h4>
+        <p className="text-lg">{desc}</p>
       </div>
-      <h4 className="text-2xl text-black">{title}</h4>
-      <p className="text-lg">{desc}</p>
-    </div>
+    </ScrollAnimation>
   );
 }
