@@ -57,3 +57,15 @@
 .zoom:hover img {
   transform: scale(1.2);
 }
+
+button.dark-mod-off {
+  background-color: rgb(96, 211, 96);
+}
+button.dark-mod-on {
+  background-color: rgb(17, 24, 39);
+}
+
+span.dark-mod-off {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px, rgba(0, 0, 0, 0.1) 0px 1px 1px;
+  transform-origin: 50% 50% 0px;
+}

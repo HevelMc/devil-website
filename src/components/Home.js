@@ -1,6 +1,7 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import { SocialIcon } from "react-social-icons";
 
 export default function Home() {
   return (
@@ -27,8 +28,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="presentation" className="pt-20 px-4">
-        <h1 className="font-black cursive text-dark text-3xl text-center">
+      <section id="presentation" className="pt-20 px-4 dark:bg-gray-700">
+        <h1 className="font-black dark:text-white cursive text-dark text-3xl text-center">
           PRÉSENTATION DEVIL MULTIGAMING ET DEVIL LEAGUE
         </h1>
         <div className="flex flex-wrap space-x-4 pt-12 lg:px-20 xl:px-40 2xl:px-60">
@@ -39,7 +40,7 @@ export default function Home() {
                   src={process.env.PUBLIC_URL + "/medias/devil multigaming.jpg"}
                 />
               </div>
-              <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
+              <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 lg:px-4">
                 Qu'est-ce que Devil Multigaming ? Devil MultiGaming est une
                 structure e-sport qui concerne les joueurs PS4, Xbox One et PC
               </p>
@@ -52,7 +53,7 @@ export default function Home() {
                   src={process.env.PUBLIC_URL + "/medias/devil league.jpg"}
                 />
               </div>
-              <p className="lg:text-3xl text-2xl font-black cursive pt-8 lg:px-4">
+              <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 lg:px-4">
                 La structure Devil League organise aussi des tournois Royal Cup
                 sur différentes plateformes et jeux et créé des LANs e-sport
               </p>
@@ -60,8 +61,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="vos-projets" className="py-20 px-4">
-        <h1 className="font-black cursive text-dark text-3xl text-center">
+      <section id="vos-projets" className="py-20 px-4 dark:bg-gray-700">
+        <h1 className="font-black dark:text-white cursive text-dark text-3xl text-center">
           Vos projets seront réalisés avec un grand souci du détail
           <br />
           De la conception jusqu'à la réalisation
@@ -99,6 +100,53 @@ export default function Home() {
           />
         </div>
       </section>
+      <section id="social-networks" className="dark:bg-gray-700">
+        <div className="container mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl mb-8 p-4 shadow-lg">
+          <h1 className="font-black cursive text-dark dark:text-white text-3xl text-center">
+            Suivez-nous sur les réseaux sociaux :
+          </h1>
+          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-4 justify-center justify-items-center py-4 px-4">
+            <SocialIcon
+              url="https://twitter.com/EsportDevils"
+              className="mr-4 my-2"
+              target="_blank"
+              style={{ height: 64, width: 64 }}
+            />
+            <SocialIcon
+              url="https://www.twitch.tv/devil_multigaming"
+              className="mr-4 my-2"
+              target="_blank"
+              style={{ height: 64, width: 64 }}
+            />
+            <SocialIcon
+              url="https://www.instagram.com/devil_multigaming/"
+              className="mr-4 my-2"
+              target="_blank"
+              bgColor="#dd2a7b"
+              style={{ height: 64, width: 64 }}
+            />
+            <SocialIcon
+              url="https://www.facebook.com/esportdevil/"
+              className="mr-4 my-2"
+              target="_blank"
+              style={{ height: 64, width: 64 }}
+            />
+            <SocialIcon
+              url="https://discord.com/invite/PY7qYFn"
+              className="mr-4 my-2"
+              target="_blank"
+              bgColor="#7289da"
+              style={{ height: 64, width: 64 }}
+            />
+            <SocialIcon
+              url="https://www.youtube.com/channel/UCYZmL9xDbOt012V_qhpIK4w?view_as=subscriber"
+              className="mr-4 my-2"
+              target="_blank"
+              style={{ height: 64, width: 64 }}
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
@@ -106,7 +154,7 @@ export default function Home() {
 function Project({ img, title, desc }) {
   return (
     <ScrollAnimation animateIn="animate__fadeIn">
-      <figure className="bg-gray-100 rounded-xl p-4 shadow-lg">
+      <figure className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 shadow-lg">
         <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-2 border-gray-400 border-opacity-50">
           <img
             className="h-auto"
@@ -115,10 +163,10 @@ function Project({ img, title, desc }) {
         </div>
         <div className="pt-6 md:p-6 text-center md:text-left space-y-4">
           <blockquote>
-            <p className="text-lg text-center font-semibold">{title}</p>
+            <p className="text-lg text-center font-semibold dark:text-white">{title}</p>
           </blockquote>
           <figcaption className="font-medium text-center">
-            <div className="text-gray-500">{desc}</div>
+            <div className="text-gray-500 dark:text-gray-300">{desc}</div>
           </figcaption>
         </div>
       </figure>
