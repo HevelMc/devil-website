@@ -100,7 +100,30 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="social-networks" className="dark:bg-gray-700">
+      <section id="contact">
+        <div className="photo-container">
+          <img src={process.env.PUBLIC_URL + "/medias/contact.jpg"} />
+          <div className="darkener">
+            <div className="caption px-10 lg:px-24 md:px-20">
+              <h2 className="cursive text-white lg:text-6xl md:text-5xl text-4xl">
+              LAISSEZ UN MESSAGE SUR LE SITE
+              </h2>
+              <div class="content-box">
+                <a href="/contact" className="inline-block group mt-8 justify-center">
+                  <div className="dark:bg-gray-900 sm:w-auto inline-flex items-center justify-center text-blue-900 dark:text-blue-200 group-hover:text-blue-500 dark:group-hover:text-blue-300 font-medium leading-none bg-white rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-transparent transform group-hover:-translate-y-0.5 transition-all duration-150">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor" class="text-blue-400 dark:text-blue-100 mr-3">
+                      <path fillRule="evenodd" d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z" clipRule="evenodd" />
+                    </svg>
+                    Contactez-nous !
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+        </div>
+      </section>
+      
+      <section id="social-networks" className="pt-20 dark:bg-gray-700">
         <div className="container mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl mb-8 p-4 shadow-lg">
           <h1 className="font-black cursive text-dark dark:text-white text-3xl text-center">
             Suivez-nous sur les réseaux sociaux :
