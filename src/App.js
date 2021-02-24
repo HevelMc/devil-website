@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route component={About} path='/about' />
         <Route component={Contact} path='/contact' />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

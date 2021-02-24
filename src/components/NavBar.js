@@ -42,7 +42,7 @@ export default function NavBar() {
             }}
             id="headlessui-switch-1"
             role="switch"
-            tabindex="0"
+            tabIndex="0"
             className={`${
               darkMode ? "dark-mod-on" : "dark-mod-off"
             } mx-2 inline-flex items-center px-0.5 rounded-full w-12 h-6 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-gray-500 focus:outline-none`}

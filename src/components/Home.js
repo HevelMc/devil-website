@@ -2,6 +2,7 @@ import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import { SocialIcon } from "react-social-icons";
+import Spacer from "../components/Spacer";
 
 export default function Home() {
   return (
@@ -28,12 +29,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="presentation" className="pt-20 px-4 dark:bg-gray-700">
+
+      <Spacer />
+
+      <section id="presentation" className="px-4 dark:bg-gray-700">
         <h1 className="font-black dark:text-white cursive text-dark text-3xl text-center">
           PRÉSENTATION DEVIL MULTIGAMING ET DEVIL LEAGUE
         </h1>
         <div className="flex flex-wrap space-x-4 pt-12 lg:px-20 xl:px-40 2xl:px-60">
-          <div className="flex-auto md:flex-1 text-center px-4 pb-12">
+          <div className="flex-auto md:flex-1 text-center px-4">
             <ScrollAnimation animateIn="animate__fadeInLeft">
               <div className="zoom">
                 <img
@@ -61,7 +65,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="vos-projets" className="py-20 px-4 dark:bg-gray-700">
+
+      <Spacer />
+
+      <section id="vos-projets" className="px-4 dark:bg-gray-700">
         <h1 className="font-black dark:text-white cursive text-dark text-3xl text-center">
           Vos projets seront réalisés avec un grand souci du détail
           <br />
@@ -100,6 +107,9 @@ export default function Home() {
           />
         </div>
       </section>
+      
+      <Spacer />
+
       <section id="contact">
         <div className="photo-container">
           <img src={process.env.PUBLIC_URL + "/medias/contact.jpg"} />
@@ -108,10 +118,10 @@ export default function Home() {
               <h2 className="cursive text-white lg:text-6xl md:text-5xl text-4xl">
               LAISSEZ UN MESSAGE SUR LE SITE
               </h2>
-              <div class="content-box">
+              <div className="content-box">
                 <a href="/contact" className="inline-block group mt-8 justify-center">
                   <div className="dark:bg-gray-900 sm:w-auto inline-flex items-center justify-center text-blue-900 dark:text-blue-200 group-hover:text-blue-500 dark:group-hover:text-blue-300 font-medium leading-none bg-white rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-transparent transform group-hover:-translate-y-0.5 transition-all duration-150">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor" class="text-blue-400 dark:text-blue-100 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="text-blue-400 dark:text-blue-100 mr-3">
                       <path fillRule="evenodd" d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z" clipRule="evenodd" />
                     </svg>
                     Contactez-nous !
@@ -123,8 +133,10 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="social-networks" className="pt-20 dark:bg-gray-700">
-        <div className="container mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl mb-8 p-4 shadow-lg">
+      <Spacer />
+
+      <section id="social-networks" className="dark:bg-gray-700">
+        <div className="container mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl p-4 shadow-lg">
           <h1 className="font-black cursive text-dark dark:text-white text-3xl text-center">
             Suivez-nous sur les réseaux sociaux :
           </h1>
@@ -170,6 +182,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Spacer />
+
     </main>
   );
 }
