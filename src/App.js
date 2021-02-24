@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <NavBar />
@@ -22,5 +22,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

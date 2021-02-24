@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../index.css";
+import usePersistedState from "./usePersistedState";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = usePersistedState(false);
+
+  updateDarkTheme(darkMode);
 
   return (
     <header className="dark:bg-gray-800">
@@ -24,9 +27,7 @@ export default function NavBar() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
-            className={`${
-              darkMode ? "text-gray-600" : "text-yellow-500"
-            }  w-5 h-5 fill-current`}
+            className="dark:text-gray-600 text-yellow-500 w-5 h-5 fill-current"
           >
             <path
               fillRule="evenodd"
@@ -37,8 +38,7 @@ export default function NavBar() {
           <button
             onClick={() => {
               setDarkMode(!darkMode);
-              if (!darkMode) document.documentElement.classList.add("dark");
-              else document.documentElement.classList.remove("dark");
+              updateDarkTheme(!darkMode);
             }}
             id="headlessui-switch-1"
             role="switch"
@@ -58,9 +58,7 @@ export default function NavBar() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
-            className={`${
-              darkMode ? "text-gray-100" : "text-gray-400"
-            } w-5 h-5 fill-current`}
+            className="dark:text-gray-100 text-gray-400 w-5 h-5 fill-current"
           >
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
           </svg>
@@ -175,4 +173,9 @@ function NavBarLink({ to, exact, children, menu }) {
       {children}
     </NavLink>
   );
+}
+
+function updateDarkTheme(darkMode) {
+  if (darkMode) document.documentElement.classList.add("dark");
+  else document.documentElement.classList.remove("dark");
 }
