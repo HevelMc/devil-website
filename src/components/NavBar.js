@@ -7,18 +7,21 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = usePersistedState(false);
 
-  updateDarkTheme(darkMode);
+  updateDarkTheme();
 
   return (
     <header className="dark:bg-gray-800">
-      <div className="container mx-auto flex justify-between">
+      <div className="container mx-auto flex justify-between px-4">
         {/* Name */}
         <NavLink
           className="text-gray-600 dark:text-gray-200 inline-flex items-center py-3 px-3 mr-4 hover:text-gray-700 text-3xl font-bold cursive tracking-widest md:whitespace-nowrap"
           to="/"
           exact
         >
-          <p className="hidden xl:inline">DEVIL MULTIGAMING E-SPORT</p>
+          <svg className="inline mr-4 fill-current text-red-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 392.777 370.616">
+            <path id="Exclusion_1" data-name="Exclusion 1" d="M199.519,370.616h0a20.955,20.955,0,0,1-3.134-.19l-.009,0a22.177,22.177,0,0,1-3.123.187,41.5,41.5,0,0,1-12.775-2.159,55.275,55.275,0,0,1-18.561-10.649c-27.849-21.484-84.433-62.782-85-63.2-.017.045-1.935,4.986-2.893,15.568a153.847,153.847,0,0,0-.362,20.388,244.384,244.384,0,0,0,3.255,29.615A178.721,178.721,0,0,1,47.16,325.475a140.362,140.362,0,0,1-14.889-30.212,109.374,109.374,0,0,1-5.163-21.339,57.212,57.212,0,0,1-.579-8.086l-.008,0a37.436,37.436,0,0,1-11.8,2.192,18.4,18.4,0,0,1-6.688-1.124,11.449,11.449,0,0,1-5.429-4.262c-4.5-6.619-3.178-19.066,3.924-37,3.37-12.988,11-29.479,22.674-49.015,9.34-15.629,21.276-33.231,35.476-52.316C88.875,91.8,111.523,65.954,111.748,65.7c-.071.334-8.321,39.035-15.908,80.314C91.411,170.112,88.1,190.228,86,205.8c-2.626,19.463-3.356,31.839-2.172,36.784,23.009,16.894,82.951,60.621,83.542,61.052V224.813h-.023c-.793,0-19.648.244-39.338,21.487a135.385,135.385,0,0,1-2.33-28.028,219.4,219.4,0,0,1,2.767-30.727c1.581-10.1,3.871-20.98,6.806-32.336,2.679-10.364,5.972-21.418,9.788-32.855,6.441-19.306,14.387-39.884,24.293-62.909,8.44-19.619,16.809-37.521,23.533-51.906l0,0,.025-.054c1.226-2.622,2.383-5.1,3.492-7.48,1.128,2.422,2.288,4.905,3.517,7.534,6.724,14.385,15.093,32.288,23.535,51.911,9.906,23.026,17.853,43.6,24.293,62.909,3.816,11.437,7.109,22.491,9.788,32.855,2.936,11.355,5.225,22.235,6.806,32.336a219.383,219.383,0,0,1,2.767,30.727,135.386,135.386,0,0,1-2.329,28.028c-19.69-21.243-38.546-21.487-39.339-21.487H225.4v78.822c.36-.263,60.606-44.213,83.542-61.052,1.185-4.945.454-17.321-2.172-36.784-2.1-15.57-5.412-35.686-9.842-59.788C289.377,104.921,281.1,66.084,281.021,65.7l.033.035c2.382,2.728,23.939,27.548,47.035,58.591,14.2,19.085,26.136,36.687,35.476,52.316,11.675,19.536,19.3,36.027,22.675,49.015,7.1,17.927,8.421,30.374,3.923,36.993a11.451,11.451,0,0,1-5.429,4.263,18.4,18.4,0,0,1-6.688,1.125,37.456,37.456,0,0,1-11.806-2.2l0,.013a57.926,57.926,0,0,1-.58,8.073,109.365,109.365,0,0,1-5.163,21.339,140.362,140.362,0,0,1-14.889,30.212,178.713,178.713,0,0,1-29.755,34.707,244.37,244.37,0,0,0,3.255-29.615,153.845,153.845,0,0,0-.362-20.388c-.953-10.529-2.874-15.519-2.893-15.568-.534.39-57.374,41.884-85,63.2a55.279,55.279,0,0,1-18.559,10.649A41.493,41.493,0,0,1,199.519,370.616Z" />
+          </svg>
+          <p className="hidden xl:inline">DEVIL MULTIGAMING</p>
           <p className="inline xl:hidden">DEVIL</p>
         </NavLink>
 
@@ -38,7 +41,7 @@ export default function NavBar() {
           <button
             onClick={() => {
               setDarkMode(!darkMode);
-              updateDarkTheme(!darkMode);
+              updateDarkTheme();
             }}
             id="headlessui-switch-1"
             role="switch"
@@ -154,28 +157,30 @@ export default function NavBar() {
       </div>
     </header>
   );
+  
+  function NavBarLink({ to, exact, children, menu }) {
+    return (
+      <NavLink
+        onClick={() => setIsMenuOpen(false)}
+        to={to}
+        className={`${
+          !menu
+            ? "inline-flex items-center py-3 px-3 my-6 rounded whitespace-nowrap"
+            : "hover:bg-gray-200 dark:hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+        } hover:text-gray-900 text-gray-500 dark:text-gray-100 hover:underline`}
+        activeClassName={`${
+          !menu ? "" : "bg-gray-100 dark:bg-gray-900"
+        } text-gray-900 text-black underline`}
+        exact={exact}
+      >
+        {children}
+      </NavLink>
+    );
+  }
+  
+  function updateDarkTheme() {
+    if (darkMode) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
+  }
 }
 
-function NavBarLink({ to, exact, children, menu }) {
-  return (
-    <NavLink
-      to={to}
-      className={`${
-        !menu
-          ? "inline-flex items-center py-3 px-3 my-6 rounded whitespace-nowrap"
-          : "hover:bg-gray-200 dark:hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-      } hover:text-gray-900 text-gray-500 dark:text-gray-100 hover:underline`}
-      activeClassName={`${
-        !menu ? "" : "bg-gray-100 dark:bg-gray-900"
-      } text-gray-900 text-black underline`}
-      exact={exact}
-    >
-      {children}
-    </NavLink>
-  );
-}
-
-function updateDarkTheme(darkMode) {
-  if (darkMode) document.documentElement.classList.add("dark");
-  else document.documentElement.classList.remove("dark");
-}

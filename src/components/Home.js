@@ -37,27 +37,27 @@ export default function Home() {
           PRÉSENTATION DEVIL MULTIGAMING ET DEVIL LEAGUE
         </h1>
         <div className="flex flex-wrap space-x-4 pt-12 lg:px-20 xl:px-40 2xl:px-60">
-          <div className="flex-auto md:flex-1 text-center px-4">
-            <ScrollAnimation animateIn="animate__fadeInLeft">
+          <div className="flex-auto md:flex-1 pb-8 md:pb-0 text-center px-4">
+            <ScrollAnimation animateIn="animate__fadeIn">
               <div className="zoom">
                 <img
                   src={process.env.PUBLIC_URL + "/medias/devil multigaming.jpg"}
                 />
               </div>
-              <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 lg:px-4">
+              <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-4 md:pt-8 lg:px-4">
                 Qu'est-ce que Devil Multigaming ? Devil MultiGaming est une
                 structure e-sport qui concerne les joueurs PS4, Xbox One et PC
               </p>
             </ScrollAnimation>
           </div>
           <div className="flex-auto md:flex-1 text-center px-4">
-            <ScrollAnimation animateIn="animate__fadeInRight">
+            <ScrollAnimation animateIn="animate__fadeIn">
               <div className="zoom">
                 <img
                   src={process.env.PUBLIC_URL + "/medias/devil league.jpg"}
                 />
               </div>
-              <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 lg:px-4">
+              <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-4 md:pt-8 lg:px-4">
                 La structure Devil League organise aussi des tournois Royal Cup
                 sur différentes plateformes et jeux et créé des LANs e-sport
               </p>

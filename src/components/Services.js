@@ -33,7 +33,7 @@ export default function Services() {
           animateOut="animate__zoomOut"
         >
           <h1 className="font-black dark:text-white cursive text-dark text-4xl text-center mb-8">
-            ‟ Réglement de la structure devil multigaming ”
+            ‟ Réglement de la structure Devil MultiGaming ”
           </h1>
         </ScrollAnimation>
         <Paragraph>
@@ -119,7 +119,7 @@ function Paragraph({ children }) {
   return (
     <ScrollAnimation animateIn="animate__fadeIn">
       <div className="container mx-auto">
-        <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 px-12 md:px-32">
+        <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 px-4 sm:px-12 md:px-32">
           {children}
         </p>
       </div>

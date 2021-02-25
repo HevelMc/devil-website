@@ -40,7 +40,7 @@ export default function About() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__fadeIn">
           <div className="container mx-auto">
-            <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 px-12 md:px-32">
+            <p className="lg:text-3xl text-2xl font-black dark:text-white cursive pt-8 px-4 sm:px-12 text-center md:text-left md:px-32">
               Pour toute demande de candidature, contactez par twitter
               @esportdevils.
               <br />
