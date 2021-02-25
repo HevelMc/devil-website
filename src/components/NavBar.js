@@ -5,7 +5,7 @@ import usePersistedState from "./usePersistedState";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = usePersistedState(false);
+  const [darkMode, setDarkMode] = usePersistedState(true);
 
   updateDarkTheme();
 

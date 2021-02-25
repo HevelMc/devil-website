@@ -51,7 +51,7 @@ export default function Contact() {
                 </p>
                 <div className="grid grid-rows-2 grid-flow-col gap-4 justify-center py-4 px-4">
                   <SocialIcon
-                    url="email:devilgangstaresport@gmail.com"
+                    url="mailto:devilgangstaresport@gmail.com"
                     className="mr-4 my-2"
                     target="_blank"
                     style={{ height: 64, width: 64 }}
