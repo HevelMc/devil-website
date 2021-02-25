@@ -1,5 +1,6 @@
 {
   "name": "devil",
+  "homepage": "https://devil.electryon-mc.fr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
