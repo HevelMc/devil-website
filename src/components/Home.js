@@ -3,8 +3,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import { SocialIcon } from "react-social-icons";
 import Spacer from "../components/Spacer";
+import SoundButton from "../components/SoundButton";
 
 export default function Home() {
+  var [soundButton, isVideoMuted] = new SoundButton();
   return (
     <main>
       <section id="video">
@@ -15,9 +17,10 @@ export default function Home() {
             autoPlay
             loop="0"
             playsInline
-            muted="1"
+            muted={ isVideoMuted }
           />
           <div className="darkener">
+            { soundButton }
             <div className="caption px-10 lg:px-24 md:px-20">
               <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
                 BIENVENUE SUR LE SITE WEB DE LA STRUCTURE DEVIL MULTIGAMING

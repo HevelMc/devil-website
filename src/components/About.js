@@ -1,8 +1,10 @@
 import React from "react";
 import Spacer from "../components/Spacer";
 import ScrollAnimation from "react-animate-on-scroll";
+import SoundButton from "../components/SoundButton";
 
 export default function About() {
+  var [soundButton, isVideoMuted] = new SoundButton();
   return (
     <main>
       <section id="video">
@@ -13,9 +15,10 @@ export default function About() {
             autoPlay
             loop="0"
             playsInline
-            muted="1"
+            muted={ isVideoMuted }
           />
           <div className="darkener">
+            { soundButton }
             <div className="caption px-10 lg:px-24 md:px-20">
               <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
                 À PROPOS DE NOUS
