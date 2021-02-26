@@ -27,13 +27,9 @@ export default function Contact() {
             <ScrollAnimation animateIn="animate__fadeIn" delay={1000}>
               <iframe
                 className="h-96"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
                 src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=%2010%20Rue%20de%20Chaumont,%20%2075019%20Paris,%20France+(Devil%20MultiGaming)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 width="100%"
                 height="100%"
-                frameborder="0"
               ></iframe>
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeIn" delay={1000}>

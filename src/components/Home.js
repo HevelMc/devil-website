@@ -115,7 +115,7 @@ export default function Home() {
         <div className="photo-container">
           <img src={process.env.PUBLIC_URL + "/medias/contact.jpg"} />
           <div className="darkener">
-            <div className="caption px-10 lg:px-24 md:px-20">
+            <div className="caption px-10 lg:px-24 md:px-20 m-auto text-center">
               <h2 className="cursive text-white lg:text-6xl md:text-5xl text-4xl">
                 LAISSEZ UN MESSAGE SUR LE SITE
               </h2>
