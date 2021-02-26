@@ -15,18 +15,19 @@ export default function Projects() {
             autoPlay
             loop="0"
             playsInline
-            muted={ isVideoMuted }
+            muted={isVideoMuted}
           />
           <div className="darkener">
-            { soundButton }
-            <div className="caption px-10 lg:px-24 md:px-20">
-              <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
-                ASSOCIATION SOUS LOI 1901
-              </h2>
-            </div>
+            <div className="ml-auto mb-auto">{soundButton}</div>
           </div>
         </div>
       </section>
+
+      <Spacer />
+
+      <h2 className="cursive text-white text-center lg:text-6xl md:text-5xl text-4xl">
+        NOS PROJETS
+      </h2>
 
       <Spacer />
 
@@ -116,9 +117,12 @@ export default function Projects() {
 
 function Partenaire({ url }) {
   return (
-    <ScrollAnimation animateIn="animate__fadeIn">
+    <ScrollAnimation animateIn="animate__fadeIn" key={url}>
       <div className="w-48 h-48 overflow-hidden mx-auto zoom">
-        <img className="w-full" src={process.env.PUBLIC_URL + "/medias/nos-partenaires/" + url} />
+        <img
+          className="w-full"
+          src={process.env.PUBLIC_URL + "/medias/nos-partenaires/" + url}
+        />
       </div>
     </ScrollAnimation>
   );

@@ -6,18 +6,11 @@ import ScrollAnimation from "react-animate-on-scroll";
 export default function Contact() {
   return (
     <main>
-      <section id="photo">
-        <div className="photo-container">
-          <img src={process.env.PUBLIC_URL + "/medias/contact-bg.jpg"} />
-          <div className="darkener">
-            <div className="caption px-10 lg:px-24 md:px-20">
-              <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
-                CONTACT
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Spacer />
+
+      <h2 className="cursive text-white text-center lg:text-6xl md:text-5xl text-4xl">
+        NOUS CONTACTER
+      </h2>
 
       <Spacer />
 
@@ -44,7 +37,6 @@ export default function Contact() {
               ></iframe>
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeIn" delay={1000}>
-
               <div>
                 <p className="text-center dark:text-white cursive mt-4 text-xl">
                   Vous pouvez nous contacter par :

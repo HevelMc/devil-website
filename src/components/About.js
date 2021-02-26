@@ -15,18 +15,19 @@ export default function About() {
             autoPlay
             loop="0"
             playsInline
-            muted={ isVideoMuted }
+            muted={isVideoMuted}
           />
           <div className="darkener">
-            { soundButton }
-            <div className="caption px-10 lg:px-24 md:px-20">
-              <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
-                À PROPOS DE NOUS
-              </h2>
-            </div>
+            <div className="ml-auto mb-auto">{soundButton}</div>
           </div>
         </div>
       </section>
+
+      <Spacer />
+
+      <h2 className="cursive text-white text-center lg:text-6xl md:text-5xl text-4xl">
+        À PROPOS DE NOUS
+      </h2>
 
       <Spacer />
 
@@ -77,7 +78,7 @@ function Produits() {
 
   for (let i = 1; i <= 16; i++) {
     items.push(
-      <ScrollAnimation animateIn="animate__fadeIn">
+      <ScrollAnimation animateIn="animate__fadeIn" key={i}>
         <div className="w-64 h-64 overflow-hidden mx-auto my-auto zoom">
           <img
             className="h-full mx-auto"

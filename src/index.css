@@ -37,9 +37,6 @@
 .video-container .caption, .photo-container .caption {
   z-index: 2;
   position: relative;
-  text-align: center;
-  color: white;
-  margin: auto;
 }
 
 .darkener {
@@ -47,7 +44,7 @@
   width: 100%;
   position: inherit;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .zoom {

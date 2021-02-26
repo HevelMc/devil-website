@@ -17,21 +17,19 @@ export default function Home() {
             autoPlay
             loop="0"
             playsInline
-            muted={ isVideoMuted }
+            muted={isVideoMuted}
           />
           <div className="darkener">
-            { soundButton }
-            <div className="caption px-10 lg:px-24 md:px-20">
-              <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
-                BIENVENUE SUR LE SITE WEB DE LA STRUCTURE DEVIL MULTIGAMING
-              </h2>
-              <h3 className="cursive text-2xl pt-10">
-                Suivre sur twitter @EsportDevils et @CupChampionShip
-              </h3>
-            </div>
+            <div className="ml-auto mb-auto">{soundButton}</div>
           </div>
         </div>
       </section>
+
+      <Spacer />
+
+      <h2 className="cursive text-white text-center lg:text-6xl md:text-5xl text-4xl">
+        BIENVENUE SUR LE SITE WEB DE LA STRUCTURE DEVIL MULTIGAMING
+      </h2>
 
       <Spacer />
 
@@ -110,7 +108,7 @@ export default function Home() {
           />
         </div>
       </section>
-      
+
       <Spacer />
 
       <section id="contact">
@@ -119,23 +117,37 @@ export default function Home() {
           <div className="darkener">
             <div className="caption px-10 lg:px-24 md:px-20">
               <h2 className="cursive text-white lg:text-6xl md:text-5xl text-4xl">
-              LAISSEZ UN MESSAGE SUR LE SITE
+                LAISSEZ UN MESSAGE SUR LE SITE
               </h2>
               <div className="content-box">
-                <a href="/contact" className="inline-block group mt-8 justify-center">
+                <a
+                  href="/contact"
+                  className="inline-block group mt-8 justify-center"
+                >
                   <div className="dark:bg-gray-900 sm:w-auto inline-flex items-center justify-center text-blue-900 dark:text-blue-200 group-hover:text-blue-500 dark:group-hover:text-blue-300 font-medium leading-none bg-white rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-transparent transform group-hover:-translate-y-0.5 transition-all duration-150">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="text-blue-400 dark:text-blue-100 mr-3">
-                      <path fillRule="evenodd" d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z" clipRule="evenodd" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="text-blue-400 dark:text-blue-100 mr-3"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     Contactez-nous !
                   </div>
                 </a>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </section>
-      
+
       <Spacer />
 
       <section id="social-networks" className="dark:bg-gray-700">
@@ -187,7 +199,6 @@ export default function Home() {
       </section>
 
       <Spacer />
-
     </main>
   );
 }
@@ -204,7 +215,9 @@ function Project({ img, title, desc }) {
         </div>
         <div className="pt-6 md:p-6 text-center md:text-left space-y-4">
           <blockquote>
-            <p className="text-lg text-center font-semibold dark:text-white">{title}</p>
+            <p className="text-lg text-center font-semibold dark:text-white">
+              {title}
+            </p>
           </blockquote>
           <figcaption className="font-medium text-center">
             <div className="text-gray-500 dark:text-gray-300">{desc}</div>

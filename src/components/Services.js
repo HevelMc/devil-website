@@ -18,15 +18,18 @@ export default function Services() {
             muted={ isVideoMuted }
           />
           <div className="darkener">
-            { soundButton }
-            <div className="caption px-10 lg:px-24 md:px-20">
-              <h2 className="cursive lg:text-6xl md:text-5xl text-4xl">
-                NOS SERVICES
-              </h2>
+            <div className="ml-auto mb-auto">
+              { soundButton }
             </div>
           </div>
         </div>
       </section>
+
+      <Spacer />
+      
+      <h2 className="cursive text-white text-center lg:text-6xl md:text-5xl text-4xl">
+        NOS SERVICES
+      </h2>
 
       <Spacer />
 
